@@ -47,7 +47,6 @@
  }
  if(!function_exists('DapatkanInfo')){
 	 function DapatkanInfo($host, $api_key, $id){
-		// mail("wanzulkarnain69@gmail.com" , "ni gila habis", $host.$api_key.$id);
 		$process = curl_init($host . 'bills/'. $id);
 		curl_setopt($process, CURLOPT_HEADER, 0);
 		curl_setopt($process, CURLOPT_USERPWD, $api_key . ":");
