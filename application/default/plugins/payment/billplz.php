@@ -104,6 +104,8 @@ class Am_Paysystem_Billplz extends Am_Paysystem_Abstract
 		$form->addText('productionsandbox', array('size' => 2))
             ->setLabel("Production(1)/Staging(2) Mode")
             ->addRule('required');
+		$form->addText('successredirURL', array('size' => 80))
+            ->setLabel("Redirect URL On Success (e.g. http://www.facebook.com/billplzplugin)");
 			
     }
     
@@ -256,6 +258,11 @@ class Am_Paysystem_Transaction_Billplz_Thanks extends Am_Paysystem_Transaction_I
     public function validateSource()
     {
 		$this->b = DapatkanInfo(DapatkanHost($this->getPlugin()->getConfig('productionsandbox')), $this->getPlugin()->getConfig('merchant_id'), htmlspecialchars($_GET['billplz']['id']));
+		if ($this->b['paid']){
+			if ($this->getPlugin()->getConfig('successredirURL')!=''){
+				Am_Controller::redirectLocation($this->getPlugin()->getConfig('successredirURL'));
+			}
+		}
 		return true;
     }
     function process()
