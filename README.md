@@ -4,6 +4,7 @@ Accept payment using Billplz
 # Features
 1. Using Billplz API V3
 2. Production Mode / Sandbox Mode
+3. Auto Submit Ready
 
 # Installation
 1. Download and extract to your installation directory
