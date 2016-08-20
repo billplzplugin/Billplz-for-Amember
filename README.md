@@ -10,9 +10,9 @@ Accept payment using Billplz
 1. Download and extract to your installation directory
 2. Enable Billplz at Configuration
 3. Configure Billplz API Key & Collection ID
-   * Input 1 for production mode or;
-   * 2 for sandbox mode
-4. Input FPX or PayPal for Billplz Auto Submit Feature (Optional)
+   * Input *1* for production mode or;
+   * Input *2* for sandbox mode
+4. Input *FPX* or *PayPal* for Billplz Auto Submit Feature (*Optional*)
 5. Save. Your aMember are Billplz ready!
 
 # Clone Billplz Payment Gateway
